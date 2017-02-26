@@ -13,6 +13,7 @@
 		0F2D99921E62AF5900C5017C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F2D99901E62AF5900C5017C /* LaunchScreen.storyboard */; };
 		0F2D999D1E62B4EB00C5017C /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F2D999C1E62B4EB00C5017C /* News.storyboard */; };
 		0F2D99A01E62B52000C5017C /* NewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2D999F1E62B52000C5017C /* NewsTableViewController.m */; };
+		3E9F0C40B4FA7D97626952AF /* libPods-GCNews.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA05B1B592C0BED16945BF3A /* libPods-GCNews.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		0F2D999C1E62B4EB00C5017C /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
 		0F2D999E1E62B52000C5017C /* NewsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableViewController.h; sourceTree = "<group>"; };
 		0F2D999F1E62B52000C5017C /* NewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewController.m; sourceTree = "<group>"; };
+		8D3DFCAB17D445EB9531E5C9 /* Pods-GCNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GCNews/Pods-GCNews.debug.xcconfig"; sourceTree = "<group>"; };
+		C61AAE698A12AA44C3383B8E /* Pods-GCNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-GCNews/Pods-GCNews.release.xcconfig"; sourceTree = "<group>"; };
+		CA05B1B592C0BED16945BF3A /* libPods-GCNews.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GCNews.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E9F0C40B4FA7D97626952AF /* libPods-GCNews.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				0F2D99811E62AF5900C5017C /* GCNews */,
 				0F2D99801E62AF5900C5017C /* Products */,
+				9239B4D66D3829EC20D74286 /* Pods */,
+				3D3CBBD01AD04E705798BE2D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +110,23 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
+		3D3CBBD01AD04E705798BE2D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA05B1B592C0BED16945BF3A /* libPods-GCNews.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9239B4D66D3829EC20D74286 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8D3DFCAB17D445EB9531E5C9 /* Pods-GCNews.debug.xcconfig */,
+				C61AAE698A12AA44C3383B8E /* Pods-GCNews.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -110,9 +134,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0F2D99961E62AF5900C5017C /* Build configuration list for PBXNativeTarget "GCNews" */;
 			buildPhases = (
+				8CD7397B033FBBE60522502D /* [CP] Check Pods Manifest.lock */,
 				0F2D997B1E62AF5900C5017C /* Sources */,
 				0F2D997C1E62AF5900C5017C /* Frameworks */,
 				0F2D997D1E62AF5900C5017C /* Resources */,
+				79ED2553E2D723F95E8C292F /* [CP] Embed Pods Frameworks */,
+				405554F5289257DF5AD92F4C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -168,6 +195,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		405554F5289257DF5AD92F4C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GCNews/Pods-GCNews-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79ED2553E2D723F95E8C292F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GCNews/Pods-GCNews-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CD7397B033FBBE60522502D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0F2D997B1E62AF5900C5017C /* Sources */ = {
@@ -278,6 +353,7 @@
 		};
 		0F2D99971E62AF5900C5017C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D3DFCAB17D445EB9531E5C9 /* Pods-GCNews.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GCNews/Info.plist;
@@ -289,6 +365,7 @@
 		};
 		0F2D99981E62AF5900C5017C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C61AAE698A12AA44C3383B8E /* Pods-GCNews.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GCNews/Info.plist;

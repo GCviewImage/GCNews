@@ -1,0 +1,10 @@
+platform :ios, '10.0'
+#use_frameworks!个别需要用到它，比如reactiveCocoa
+
+target 'GCNews' do
+pod 'AFNetworking', '~> 3.1.0'
+
+end
+
+
+
