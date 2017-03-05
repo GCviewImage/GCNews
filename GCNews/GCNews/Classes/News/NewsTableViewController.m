@@ -7,6 +7,7 @@
 //
 
 #import "NewsTableViewController.h"
+#import "NewsModel.h"
 
 @interface NewsTableViewController ()
 
@@ -17,11 +18,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    //测试加载新闻数据
+    [NewsModel loadNewsListWithUrlString:@"T1348647853363/0-20.html"];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
 }
 
 - (void)didReceiveMemoryWarning {
