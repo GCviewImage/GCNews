@@ -8,6 +8,7 @@
 
 #import "NewsModel.h"
 #import "ANetworkTools.h"
+#import <objc/runtime.h>
 
 @implementation NewsModel
 
@@ -17,8 +18,7 @@
     id obj = [[self alloc]init];
     
     // 手动遍历需要的数据
-    NSArray *propertis = @[@"ltitle",@"digest",@"replyCount",@"imgsrc"];
-    
+    NSArray *propertis = [self loadList];
     for (NSString *key in propertis) {
         if (dict[key] != nil) {
             [obj setValue:dict[key] forKeyPath:key];
@@ -31,10 +31,36 @@
 
 // 数据完整显示
 -(NSString *)description{
-    NSArray *propertis = @[@"ltitle",@"digest",@"replyCount",@"imgsrc"];
+    NSArray *propertis = [self.class loadList];
     NSDictionary *dict = [self dictionaryWithValuesForKeys:propertis];
     
     return [NSString stringWithFormat:@"%@,%p,%@",self.class,self,dict];
+}
+
+
+//统一调用这个方法遍历模型数据
++(NSArray *)loadList{
+    
+    unsigned int count = 0;
+    
+   objc_property_t *list = class_copyPropertyList([self class], &count);
+    
+    //遍历数组，动态获取属性名称
+    NSMutableArray *arrayM = [NSMutableArray arrayWithCapacity:count];
+    
+    for (unsigned int i = 0; i < count; ++i) {
+        
+        objc_property_t pry = list[i];
+        
+        const char *cName = property_getName(pry);
+        
+        [arrayM addObject:[NSString stringWithUTF8String:cName]];
+    }
+    NSLog(@"%@",arrayM);
+    
+    free(list);
+
+    return arrayM;
 }
 
 
