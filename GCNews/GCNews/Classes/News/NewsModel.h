@@ -11,7 +11,7 @@
 @interface NewsModel : NSObject
 
 // 新闻标题
-@property (nonatomic, copy) NSString *titel;
+@property (nonatomic, copy) NSString *ltitle;
 
 // 新闻摘要
 @property (nonatomic, copy) NSString *digest;
