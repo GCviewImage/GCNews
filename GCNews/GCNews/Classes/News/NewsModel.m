@@ -39,7 +39,14 @@
 
 
 //统一调用这个方法遍历模型数据
+// 利用关联对象，给类添加属性，OC中的类，本身就是一个特殊对象
+const char *kPropertyKey = "PropertyKey";
 +(NSArray *)loadList{
+    
+   NSArray *arrayKey = objc_getAssociatedObject(self, kPropertyKey);
+    if (arrayKey != nil) {
+        return arrayKey;
+    }
     
     unsigned int count = 0;
     
@@ -59,13 +66,17 @@
     NSLog(@"%@",arrayM);
     
     free(list);
+    
+    objc_setAssociatedObject(self, kPropertyKey, arrayM, OBJC_ASSOCIATION_COPY_NONATOMIC);
 
-    return arrayM;
+    return objc_getAssociatedObject(self, kPropertyKey);
 }
 
 
 //网络数据接口
-+(void)loadNewsListWithUrlString:(NSString *)urlString{
++(void)loadNewsListWithUrlString:(NSString *)urlString finished:(void (^)(NSArray *))finished{
+    
+    NSAssert(finished != nil, @"断言：必须传入完成回调");
     
     [[ANetworkTools sharedNetworkTools] GET:urlString parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *responseObject) {
     
@@ -82,7 +93,8 @@
             [arrayM addObject:[self newsWithDict:obj]];
             
         }
-        NSLog(@"字典转模型%@", arrayM);
+//        NSLog(@"字典转模型%@", arrayM);
+        finished (arrayM.copy);
 
 //        NSLog(@"成功回调：%@",responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

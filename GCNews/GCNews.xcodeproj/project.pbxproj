@@ -15,6 +15,7 @@
 		0F2D99921E62AF5900C5017C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F2D99901E62AF5900C5017C /* LaunchScreen.storyboard */; };
 		0F2D999D1E62B4EB00C5017C /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F2D999C1E62B4EB00C5017C /* News.storyboard */; };
 		0F2D99A01E62B52000C5017C /* NewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2D999F1E62B52000C5017C /* NewsTableViewController.m */; };
+		0F52F6101E7D6AF1001F9C1E /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F52F60F1E7D6AF1001F9C1E /* NewsTableViewCell.m */; };
 		0F610E351E62E45C00116DAB /* ANetworkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F610E341E62E45C00116DAB /* ANetworkTools.m */; };
 		3E9F0C40B4FA7D97626952AF /* libPods-GCNews.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA05B1B592C0BED16945BF3A /* libPods-GCNews.a */; };
 /* End PBXBuildFile section */
@@ -34,6 +35,8 @@
 		0F2D999C1E62B4EB00C5017C /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
 		0F2D999E1E62B52000C5017C /* NewsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableViewController.h; sourceTree = "<group>"; };
 		0F2D999F1E62B52000C5017C /* NewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewController.m; sourceTree = "<group>"; };
+		0F52F60E1E7D6AF1001F9C1E /* NewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableViewCell.h; sourceTree = "<group>"; };
+		0F52F60F1E7D6AF1001F9C1E /* NewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewCell.m; sourceTree = "<group>"; };
 		0F610E331E62E45C00116DAB /* ANetworkTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANetworkTools.h; sourceTree = "<group>"; };
 		0F610E341E62E45C00116DAB /* ANetworkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANetworkTools.m; sourceTree = "<group>"; };
 		8D3DFCAB17D445EB9531E5C9 /* Pods-GCNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GCNews/Pods-GCNews.debug.xcconfig"; sourceTree = "<group>"; };
@@ -120,6 +123,8 @@
 				0F2D999F1E62B52000C5017C /* NewsTableViewController.m */,
 				0F05DC1A1E6BF5240001F51B /* NewsModel.h */,
 				0F05DC1B1E6BF5240001F51B /* NewsModel.m */,
+				0F52F60E1E7D6AF1001F9C1E /* NewsTableViewCell.h */,
+				0F52F60F1E7D6AF1001F9C1E /* NewsTableViewCell.m */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -277,6 +282,7 @@
 				0F2D99871E62AF5900C5017C /* AppDelegate.m in Sources */,
 				0F05DC201E6BFA4C0001F51B /* NSArray+Log.m in Sources */,
 				0F610E351E62E45C00116DAB /* ANetworkTools.m in Sources */,
+				0F52F6101E7D6AF1001F9C1E /* NewsTableViewCell.m in Sources */,
 				0F2D99841E62AF5900C5017C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

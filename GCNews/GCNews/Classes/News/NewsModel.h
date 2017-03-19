@@ -14,7 +14,7 @@
 @property (nonatomic, copy) NSString *ltitle;
 
 // 新闻摘要
-@property (nonatomic, copy) NSString *digest;
+@property (nonatomic, copy) NSString *source;
 
 // 新闻跟帖数
 @property (nonatomic, assign) int replyCount;
@@ -27,6 +27,6 @@
 +(instancetype)newsWithDict:(NSDictionary *)dict;
 
 //加载指定网络数据接口
-+(void)loadNewsListWithUrlString: (NSString *)urlString;
++(void)loadNewsListWithUrlString: (NSString *)urlString finished: (void (^)(NSArray *v))finished;
 
 @end
