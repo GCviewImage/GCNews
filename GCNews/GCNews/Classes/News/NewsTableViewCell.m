@@ -26,7 +26,7 @@
 -(void)setNews:(NewsModel *)news{
     _news = news;
     
-    self.titleLabel.text = news.ltitle;
+    self.titleLabel.text = news.title;
     self.sourceLabel.text = news.source;
     self.replyLabel.text = [NSString stringWithFormat:@"%d跟帖", news.replyCount];
     

@@ -11,7 +11,7 @@
 @interface NewsModel : NSObject
 
 // 新闻标题
-@property (nonatomic, copy) NSString *ltitle;
+@property (nonatomic, copy) NSString *title;
 
 // 新闻摘要
 @property (nonatomic, copy) NSString *source;
@@ -28,9 +28,9 @@
 //大图
 @property (nonatomic, assign, getter = isBigImage) BOOL imgType;
 
-
-// 字典转模型
-+(instancetype)newsWithDict:(NSDictionary *)dict;
+//
+//// 字典转模型
+//+(instancetype)newsWithDict:(NSDictionary *)dict;
 
 //加载指定网络数据接口
 +(void)loadNewsListWithUrlString: (NSString *)urlString finished: (void (^)(NSArray *v))finished;
