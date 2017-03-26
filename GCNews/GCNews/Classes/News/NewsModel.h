@@ -22,6 +22,12 @@
 //配图地址
 @property (nonatomic, copy) NSString *imgsrc;
 
+//多图地址
+@property (nonatomic, strong) NSArray *imgextra;
+
+//大图
+@property (nonatomic, assign, getter = isBigImage) BOOL imgType;
+
 
 // 字典转模型
 +(instancetype)newsWithDict:(NSDictionary *)dict;

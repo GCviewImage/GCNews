@@ -13,4 +13,6 @@
 
 @property (nonatomic, strong) NewsModel *news;
 
++(NSString *)cellIdentifier:(NewsModel *)news;
+
 @end
